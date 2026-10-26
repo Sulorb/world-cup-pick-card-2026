@@ -101,6 +101,7 @@
       fields[id].addEventListener('input', update);
     }
     function cleanScore(value) {
+      if (value.trim() === '') return null;
       const n = Number(value);
       return Number.isInteger(n) && n >= 0 && n <= 20 ? n : null;
     }
